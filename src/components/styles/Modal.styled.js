@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { AiOutlineClose } from 'react-icons/ai';
+import { MdOutlineArrowBackIosNew } from 'react-icons/md';
 export const Modal = styled.div`
   position: fixed;
   top: 0;
@@ -17,4 +17,6 @@ export const Modal = styled.div`
   }
 `;
 
-export const ModalCloseIcon = styled(AiOutlineClose)``;
+export const ModalCloseIcon = styled(MdOutlineArrowBackIosNew)`
+margin-left:10px;
+`;

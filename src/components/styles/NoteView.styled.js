@@ -18,10 +18,10 @@ export const Titles = styled.div`
   } */
 `;
 export const Details = styled.span`
-  margin-left: 3rem;
+  margin-left: 1rem;
   height: 5vh;
   line-height: 2;
-  width: 30vw;
+  width: 40vw;
   h6 {
     font-size: 1rem;
   }
