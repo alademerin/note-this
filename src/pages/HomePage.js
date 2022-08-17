@@ -129,9 +129,9 @@ const HomePage = ({ id }) => {
     setIsMobileNoteViewOpened(true);
   };
 
-  const logout = () => {
-    dispatch({ type: 'LOGOUT' });
-  };
+  // const logout = () => {
+  //   dispatch({ type: 'LOGOUT' });
+  // };
 
   const theme = {
     colors: {
@@ -150,7 +150,7 @@ const HomePage = ({ id }) => {
           searchChanged={(e) => setSearchTerm(e.target.value.toLowerCase())}
         />
         <RowContainer>
-          <StyledDivBlockThin onClick={logout}>Logout</StyledDivBlockThin>
+          <StyledDivBlockThin></StyledDivBlockThin>
           <div>
             <NewNoteTab newNoteClicked={newNoteClicked} />
             {isLoading ? (
