@@ -79,7 +79,7 @@ const HomePage = ({ id }) => {
     setIsMobileNoteViewOpened(false);
   };
 
-  const newNoteClicked =() => {
+  const newNoteClicked = () => {
     reset();
     setIsMobileNoteViewOpened(true);
   };
@@ -115,11 +115,10 @@ const HomePage = ({ id }) => {
   const textEditorChanged = (newValue, editor) => setValue(newValue);
 
   const deleteNote = async (id) => {
-    setIs
+    setIsMobileNoteViewOpened(false);
     await deleteDoc(doc(db, 'notes', id)).then(
       toast.error('note has been deleted')
     );
-    
     reset();
   };
 
