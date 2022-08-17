@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import NewNoteTab from '../components/NewNoteTab';
 import Notes from '../components/Notes';
@@ -22,7 +22,7 @@ import { timeFormat } from 'd3-time-format';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ThemeProvider } from 'styled-components';
-import { AuthContext } from '../context/AuthContext';
+// import { AuthContext } from '../context/AuthContext';
 import Note from '../components/Note';
 import MobileNoteView from '../components/MobileNoteView';
 
@@ -37,7 +37,7 @@ const HomePage = ({ id }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isMobileNoteViewOpened, setIsMobileNoteViewOpened] = useState(false);
   console.log(isMobileNoteViewOpened);
-  const { dispatch } = useContext(AuthContext);
+  // const { dispatch } = useContext(AuthContext);
 
   // const notesCollectionRef = collection(db, 'notes');
 
@@ -76,9 +76,10 @@ const HomePage = ({ id }) => {
     setValue('');
     setDateValue('');
     setExists(false);
+    setIsMobileNoteViewOpened(false);
   };
 
-  const newNoteClicked = () => {
+  const newNoteClicked =() => {
     reset();
     setIsMobileNoteViewOpened(true);
   };
@@ -114,9 +115,11 @@ const HomePage = ({ id }) => {
   const textEditorChanged = (newValue, editor) => setValue(newValue);
 
   const deleteNote = async (id) => {
+    setIs
     await deleteDoc(doc(db, 'notes', id)).then(
       toast.error('note has been deleted')
     );
+    
     reset();
   };
 
