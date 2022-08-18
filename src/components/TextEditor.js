@@ -1,6 +1,6 @@
 import { Editor } from '@tinymce/tinymce-react';
 
-const TextEditor = ({ value, textEditorChanged }) => {
+const TextEditor = ({ value, textEditorChanged, editorBackground }) => {
   const apikey = process.env.REACT_APP_TINY_EDITOR_KEY;
   return (
     <>
@@ -33,8 +33,7 @@ const TextEditor = ({ value, textEditorChanged }) => {
             'bold italic forecolor | alignleft aligncenter ' +
             'alignright alignjustify | bullist numlist outdent indent | ' +
             'removeformat | help',
-          content_style:
-            'body { font-family:Helvetica,Arial,sans-serif; font-size:14px; }',
+          content_style: `body { font-family:Helvetica,Arial,sans-serif; font-size:14px; background:${editorBackground}`,
         }}
         value={value}
         onEditorChange={textEditorChanged}

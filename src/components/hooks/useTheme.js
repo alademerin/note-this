@@ -17,22 +17,23 @@ const lightTheme = {
     text: '#000',
   },
   mobile: '800px',
-
 };
 
 const useTheme = () => {
   const [theme, setTheme] = useState(lightTheme);
   const [isToggled, setIsToggled] = useState(false);
+  const [editorColor, setEditorColor] = useState('');
 
   useEffect(() => {
     !isToggled ? setTheme(lightTheme) : setTheme(darkTheme);
-  }, [isToggled]);
+  }, [isToggled, editorColor]);
 
   const retoggle = () => {
     setIsToggled(!isToggled);
+    setEditorColor('black');
   };
 
-  return { theme, retoggle };
+  return { theme, editorColor, retoggle };
 };
 
 export default useTheme;

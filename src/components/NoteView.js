@@ -16,6 +16,7 @@ const NoteView = ({
   titleChanged,
   titleValue,
   dateValue,
+  editorBackground,
 }) => {
   return (
     <NoteViewContainer>
@@ -40,7 +41,11 @@ const NoteView = ({
         </DetailsRowContainer>
       </HeaderContainer>
       <EditorContainer>
-        <TextEditor value={value} textEditorChanged={textEditorChanged} />
+        <TextEditor
+          value={value}
+          textEditorChanged={textEditorChanged}
+          editorBackground={editorBackground}
+        />
       </EditorContainer>
     </NoteViewContainer>
   );

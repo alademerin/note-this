@@ -11,6 +11,10 @@ export const AddNoteContainer = styled.div`
   p {
     color: ${({ theme }) => theme.colors.text};
   }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+  border-right:none;
+  }
+
   button {
     padding: 7px 10px;
     border-radius: 1rem;

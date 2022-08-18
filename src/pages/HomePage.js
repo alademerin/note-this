@@ -28,7 +28,7 @@ import MobileNoteView from '../components/MobileNoteView';
 import useTheme from '../components/hooks/useTheme';
 
 const HomePage = ({ id }) => {
-  const { theme, retoggle } = useTheme();
+  const { theme, retoggle, editorColor } = useTheme();
   const [notes, setNotes] = useState([]);
   const [value, setValue] = useState('');
   const [title, setTitle] = useState('');
@@ -38,7 +38,9 @@ const HomePage = ({ id }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [isMobileNoteViewOpened, setIsMobileNoteViewOpened] = useState(false);
-  console.log(isMobileNoteViewOpened);
+
+  const [background, setBackground] = useState(theme.colors.background);
+
   // const { dispatch } = useContext(AuthContext);
 
   // const notesCollectionRef = collection(db, 'notes');
@@ -166,6 +168,7 @@ const HomePage = ({ id }) => {
               titleChanged={(e) => setTitle(e.target.value)}
               textEditorChanged={textEditorChanged}
               btnSaveClicked={exists ? updateNote : createNote}
+              // editorBackground={'pink'}
             />
             <ToastContainer
               autoClose={1000}
