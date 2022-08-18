@@ -13,6 +13,9 @@ export const NoteItem = styled.div`
   border-right: 0.3px solid #eee;
   overflow: hidden;
   text-overflow: ellipsis;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    border-right: none;
+  }
 
   :hover {
     background: #cae6e3;
@@ -24,6 +27,7 @@ export const NoteItem = styled.div`
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    color: ${({ theme }) => theme.colors.text};
   }
   p {
     color: #bbb;
@@ -64,7 +68,7 @@ export const NoteBody = styled.div`
   /* padding-bottom: 30px; */
 `;
 export const NotesContainer = styled.div`
-  height: 83.2vh;
+  height: 86vh;
   border-right: 1px solid #eee;
   width: 30vw;
   /* border-bottom: 1px solid #eee; */
@@ -74,6 +78,7 @@ export const NotesContainer = styled.div`
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
+    border-right: none;
     /* height: 50vw; */
   }
 `;
@@ -88,6 +93,4 @@ export const DeleteIcon = styled(FaTrash)`
   }
 `;
 
-export const NoteTitle = styled.div`
-  
-`;
+export const NoteTitle = styled.div``;

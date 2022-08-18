@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyledLogoTab } from './styles/Logo.styled';
-import { FaStickyNote } from 'react-icons/fa';
+import { MdEditNote } from 'react-icons/md';
 const LogoTab = () => {
   return (
     <StyledLogoTab>
-      <FaStickyNote color='white' />
+      <MdEditNote color='white' size={45} />
       <h3>NOTE-This</h3>
     </StyledLogoTab>
   );

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: #ffffff;
-  
+  background: ${({ theme }) => theme.colors.background};
 `;

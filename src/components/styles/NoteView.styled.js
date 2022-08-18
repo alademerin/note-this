@@ -12,6 +12,7 @@ export const Titles = styled.div`
   line-height: 2;
   p {
     margin: 10px 0;
+    color: ${({ theme }) => theme.colors.text};
   }
   /* @media (max-width: ${({ theme }) => theme.mobile}) {
     margin: 0;
@@ -46,6 +47,9 @@ export const HeaderContainer = styled.div`
     border: none;
     outline: none;
     width: 100%;
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.text};
+
     @media (max-width: ${({ theme }) => theme.mobile}) {
       font-size: 20px;
       font-weight: bold;

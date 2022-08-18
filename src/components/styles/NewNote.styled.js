@@ -8,6 +8,9 @@ export const AddNoteContainer = styled.div`
   align-items: center;
   border-bottom: 1px solid #eee;
   border-right: 1px solid #eee;
+  p {
+    color: ${({ theme }) => theme.colors.text};
+  }
   button {
     padding: 7px 10px;
     border-radius: 1rem;

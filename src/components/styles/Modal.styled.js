@@ -6,7 +6,7 @@ export const Modal = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #fff;
+  background: ${({ theme }) => theme.colors.background};
   z-index: 3;
   display: none;
   /* padding: 10px 0; */
@@ -18,5 +18,6 @@ export const Modal = styled.div`
 `;
 
 export const ModalCloseIcon = styled(MdOutlineArrowBackIosNew)`
-margin-left:10px;
+  margin-left: 10px;
+  color: ${({ theme }) => theme.colors.text};
 `;

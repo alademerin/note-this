@@ -14,8 +14,8 @@ export const StyledLogoTab = styled.span`
     height: 3rem;
   }
   h3 {
-    margin-left: 1rem;
-    font-size: 1rem;
+    margin-left: 0.3rem;
+    font-size: 1.5rem;
     color: white;
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {

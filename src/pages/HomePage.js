@@ -25,8 +25,10 @@ import { ThemeProvider } from 'styled-components';
 // import { AuthContext } from '../context/AuthContext';
 import Note from '../components/Note';
 import MobileNoteView from '../components/MobileNoteView';
+import useTheme from '../components/hooks/useTheme';
 
 const HomePage = ({ id }) => {
+  const { theme, retoggle } = useTheme();
   const [notes, setNotes] = useState([]);
   const [value, setValue] = useState('');
   const [title, setTitle] = useState('');
@@ -135,21 +137,12 @@ const HomePage = ({ id }) => {
   //   dispatch({ type: 'LOGOUT' });
   // };
 
-  const theme = {
-    colors: {
-      header: '#ebfbff',
-      body: '#fff',
-      footer: '#003333',
-    },
-
-    mobile: '768px',
-  };
-
   return (
     <ThemeProvider theme={theme}>
       <Container>
         <Navbar
           searchChanged={(e) => setSearchTerm(e.target.value.toLowerCase())}
+          toggleDarkMode={retoggle}
         />
         <RowContainer>
           <StyledDivBlockThin></StyledDivBlockThin>
